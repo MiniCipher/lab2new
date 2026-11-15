@@ -1,0 +1,73 @@
+{
+ "timestamp": "2026-11-09 01:41:29",
+ "python": "3.13.18",
+ "platform": "Linux-6.18.44-fc-v310-x86_64-with-glibc2.39",
+ "cpus": 2,
+ "postgres": "16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)",
+ "redis": "7.0.15",
+ "pg_size": "1212 MB",
+ "pg_shared_buffers": "1GB",
+ "rows": {
+  "orders": 1000880,
+  "order_items": 4503123,
+  "payments": 1000800,
+  "dishes": 200,
+  "customers": 50002,
+  "items_today": 3941
+ }
+}
+S1_menu          postgres durable  rep0  p50=   1600.5us  p95=   2399.0us  p99=   2798.8us  server=492.3us
+S1_menu          postgres durable  rep1  p50=   1652.6us  p95=   2572.0us  p99=   2880.6us  server=514.6us
+S1_menu          postgres durable  rep2  p50=   1754.4us  p95=   2534.1us  p99=   2919.7us  server=510.8us
+S1_menu          redis    durable  rep0  p50=    380.8us  p95=    661.2us  p99=    808.7us  server=3.9us
+S1_menu          redis    durable  rep1  p50=    374.9us  p95=    560.1us  p99=    715.6us  server=3.7us
+S1_menu          redis    durable  rep2  p50=    415.7us  p95=    725.0us  p99=    886.3us  server=4.5us
+S2_order_check   postgres durable  rep0  p50=    366.2us  p95=    586.9us  p99=    732.5us  server=92.1us
+S2_order_check   postgres durable  rep1  p50=    322.0us  p95=    605.2us  p99=    841.8us  server=86.3us
+S2_order_check   postgres durable  rep2  p50=    327.8us  p95=    574.1us  p99=    705.0us  server=85.0us
+S2_order_check   redis    durable  rep0  p50=    139.9us  p95=    227.7us  p99=    343.3us  server=6.6us
+S2_order_check   redis    durable  rep1  p50=    146.6us  p95=    268.1us  p99=    362.8us  server=7.6us
+S2_order_check   redis    durable  rep2  p50=    140.7us  p95=    247.7us  p99=    384.2us  server=7.0us
+S4_kds_queue     postgres durable  rep0  p50=    625.9us  p95=    877.2us  p99=   1301.8us  server=171.3us
+S4_kds_queue     postgres durable  rep1  p50=    637.2us  p95=    867.0us  p99=   1140.2us  server=167.8us
+S4_kds_queue     postgres durable  rep2  p50=    620.7us  p95=    833.2us  p99=    978.0us  server=166.6us
+S4_kds_queue     redis    durable  rep0  p50=    513.0us  p95=    783.5us  p99=   1285.0us  server=148.0us
+S4_kds_queue     redis    durable  rep1  p50=    553.3us  p95=    793.7us  p99=   1079.3us  server=154.3us
+S4_kds_queue     redis    durable  rep2  p50=    506.0us  p95=    766.6us  p99=   1014.2us  server=142.7us
+S6_hall_map      postgres durable  rep0  p50=   1257.1us  p95=   1786.9us  p99=   2108.1us  server=515.9us
+S6_hall_map      postgres durable  rep1  p50=   1232.3us  p95=   1746.9us  p99=   2309.6us  server=497.1us
+S6_hall_map      postgres durable  rep2  p50=   1272.4us  p95=   1752.4us  p99=   2099.3us  server=514.2us
+S6_hall_map      redis    durable  rep0  p50=   1352.4us  p95=   1930.2us  p99=   2679.4us  server=381.2us
+S6_hall_map      redis    durable  rep1  p50=   1277.7us  p95=   1887.8us  p99=   2568.6us  server=371.0us
+S6_hall_map      redis    durable  rep2  p50=   1398.3us  p95=   1858.6us  p99=   2418.3us  server=384.7us
+S7_top_dishes    postgres durable  rep0  p50=   1510.2us  p95=   2511.9us  p99=   2715.8us  server=1361.3us
+S7_top_dishes    postgres durable  rep1  p50=   1502.4us  p95=   2336.0us  p99=   2675.2us  server=1333.1us
+S7_top_dishes    postgres durable  rep2  p50=   1460.8us  p95=   2521.2us  p99=   2690.3us  server=1337.7us
+S7_top_dishes    redis    durable  rep0  p50=    118.8us  p95=    207.7us  p99=    354.0us  server=40.2us
+S7_top_dishes    redis    durable  rep1  p50=    123.1us  p95=    205.4us  p99=    322.0us  server=45.1us
+S7_top_dishes    redis    durable  rep2  p50=    121.6us  p95=    220.6us  p99=    372.6us  server=42.6us
+S3_add_item      postgres durable  rep0  p50=   1085.7us  p95=   1766.1us  p99=   2976.1us  server=437.8us
+S3_add_item      postgres durable  rep1  p50=   1127.1us  p95=   1640.2us  p99=   2681.7us  server=447.8us
+S3_add_item      postgres durable  rep2  p50=   1061.5us  p95=   1523.7us  p99=   2166.3us  server=417.2us
+S3_add_item      redis    durable  rep0  p50=    426.7us  p95=    697.8us  p99=    914.4us  server=40.9us
+S3_add_item      redis    durable  rep1  p50=    423.4us  p95=    757.0us  p99=   1102.9us  server=46.8us
+S3_add_item      redis    durable  rep2  p50=    360.6us  p95=    661.2us  p99=   1206.5us  server=35.5us
+S3_add_item      postgres relaxed  rep0  p50=    422.2us  p95=    759.5us  p99=    887.3us  server=309.7us
+S3_add_item      postgres relaxed  rep1  p50=    430.7us  p95=    689.8us  p99=    887.9us  server=312.3us
+S3_add_item      postgres relaxed  rep2  p50=    427.4us  p95=    787.9us  p99=    902.1us  server=337.1us
+S3_add_item      redis    relaxed  rep0  p50=     99.2us  p95=    160.6us  p99=    240.8us  server=28.2us
+S3_add_item      redis    relaxed  rep1  p50=     92.0us  p95=    171.8us  p99=    291.6us  server=27.7us
+S3_add_item      redis    relaxed  rep2  p50=    106.8us  p95=    151.7us  p99=    214.6us  server=31.2us
+S5_kds_ready     postgres durable  rep0  p50=    691.8us  p95=   1068.6us  p99=   1530.1us  server=157.4us
+S5_kds_ready     postgres durable  rep1  p50=    674.3us  p95=   1026.3us  p99=   1416.9us  server=146.7us
+S5_kds_ready     postgres durable  rep2  p50=    754.7us  p95=   1212.9us  p99=   1907.1us  server=165.4us
+S5_kds_ready     redis    durable  rep0  p50=    354.8us  p95=    776.4us  p99=   1217.9us  server=41.5us
+S5_kds_ready     redis    durable  rep1  p50=    476.1us  p95=    993.2us  p99=   1414.9us  server=53.2us
+S5_kds_ready     redis    durable  rep2  p50=    395.3us  p95=    802.0us  p99=   1170.7us  server=44.3us
+S5_kds_ready     postgres relaxed  rep0  p50=    135.6us  p95=    334.8us  p99=    457.5us  server=99.9us
+S5_kds_ready     postgres relaxed  rep1  p50=    124.9us  p95=    294.5us  p99=    439.7us  server=88.6us
+S5_kds_ready     postgres relaxed  rep2  p50=    122.3us  p95=    299.5us  p99=    390.2us  server=88.3us
+S5_kds_ready     redis    relaxed  rep0  p50=    100.4us  p95=    169.5us  p99=    235.2us  server=31.9us
+S5_kds_ready     redis    relaxed  rep1  p50=    111.4us  p95=    319.7us  p99=    541.1us  server=38.1us
+S5_kds_ready     redis    relaxed  rep2  p50=    108.4us  p95=    173.3us  p99=    336.8us  server=36.5us
+saved bench/results/latency_1M.json

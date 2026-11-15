@@ -1,0 +1,33 @@
+# Базові команди Redis на ключах модуля Live Service (для демонстрації на захисті)
+#   grep -v '^#' redis_live/redis_cli_examples.redis | redis-cli   (redis-cli не підтримує коментарі)
+# (спочатку виконайте redis_live/demo.py або bench/live_seed.py, щоб ключі існували)
+
+# --- STRING: кеш меню з TTL ---
+TTL menu:json
+STRLEN menu:json
+
+# --- HASH: шапка чека, кеш страви ---
+SMEMBERS orders:open
+HGETALL menu:dish:2
+HMGET menu:dish:2 name price_minor available
+
+# --- HASH: мапа залу ---
+HLEN hall:tables
+HGETALL hall:occupied
+
+# --- ZSET: черга кухні, впорядкована за часом відправки ---
+ZCARD kds:hot
+ZRANGE kds:hot 0 4 WITHSCORES
+
+# --- ZSET: рейтинг страв дня ---
+KEYS stats:dishes:*
+# ZREVRANGE stats:dishes:2026-11-09 0 9 WITHSCORES
+
+# --- STREAM: журнал аудиту та сповіщення ---
+XLEN audit:orders
+XREVRANGE audit:orders + - COUNT 3
+
+# --- Діагностика ---
+INFO memory
+INFO commandstats
+DBSIZE

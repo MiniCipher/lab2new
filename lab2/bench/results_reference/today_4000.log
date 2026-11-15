@@ -1,0 +1,25 @@
+{
+ "timestamp": "2026-11-09 02:04:04",
+ "python": "3.13.18",
+ "platform": "Linux-6.18.44-fc-v310-x86_64-with-glibc2.39",
+ "cpus": 2,
+ "postgres": "16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)",
+ "redis": "7.0.15",
+ "pg_size": "142 MB",
+ "pg_shared_buffers": "1GB",
+ "rows": {
+  "dishes": 200,
+  "items_today": 17905,
+  "customers": 50002,
+  "payments": 104000,
+  "orders": 104000,
+  "order_items": 467977
+ }
+}
+S7_top_dishes    postgres durable  rep0  p50=   5715.4us  p95=   9902.6us  p99=  11622.7us  server=6198.4us
+S7_top_dishes    postgres durable  rep1  p50=   5526.1us  p95=   9332.5us  p99=  10018.0us  server=5706.1us
+S7_top_dishes    postgres durable  rep2  p50=   5538.2us  p95=   9263.6us  p99=   9960.1us  server=5775.8us
+S7_top_dishes    redis    durable  rep0  p50=    114.4us  p95=    227.7us  p99=    376.4us  server=43.1us
+S7_top_dishes    redis    durable  rep1  p50=    115.3us  p95=    235.8us  p99=    387.9us  server=41.4us
+S7_top_dishes    redis    durable  rep2  p50=    120.1us  p95=    208.6us  p99=    323.9us  server=40.8us
+saved bench/results/today_4000.json

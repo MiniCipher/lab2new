@@ -1,0 +1,21 @@
+mixed durable  procs=  1 postgres       971 ops/s  p50=   750.3us p95=  2061.2us p99=  2867.8us err=0
+mixed durable  procs=  1 redis         1924 ops/s  p50=   421.0us p95=  1186.3us p99=  1635.2us err=0
+mixed durable  procs=  2 postgres      1751 ops/s  p50=  1161.3us p95=  2156.2us p99=  3053.5us err=0
+mixed durable  procs=  2 redis         3011 ops/s  p50=   543.4us p95=  1476.0us p99=  2073.1us err=0
+mixed durable  procs=  4 postgres      1834 ops/s  p50=  1919.1us p95=  4725.4us p99=  6522.3us err=0
+mixed durable  procs=  4 redis         3700 ops/s  p50=   923.2us p95=  2313.8us p99=  3256.5us err=0
+mixed durable  procs=  8 postgres      2218 ops/s  p50=  2929.4us p95=  8938.6us p99= 13750.0us err=0
+mixed durable  procs=  8 redis         3970 ops/s  p50=  1760.4us p95=  4282.9us p99=  6354.7us err=0
+mixed durable  procs= 16 postgres      2272 ops/s  p50=  5167.1us p95= 19951.0us p99= 32289.7us err=0
+mixed durable  procs= 16 redis         4717 ops/s  p50=  2898.9us p95=  7698.0us p99= 12312.4us err=0
+mixed relaxed  procs=  1 postgres      1089 ops/s  p50=   627.7us p95=  2381.1us p99=  3398.4us err=0
+mixed relaxed  procs=  1 redis         2178 ops/s  p50=   361.0us p95=  1198.9us p99=  1748.7us err=0
+mixed relaxed  procs=  2 postgres      2390 ops/s  p50=   501.1us p95=  2489.2us p99=  3350.6us err=0
+mixed relaxed  procs=  2 redis         3794 ops/s  p50=   402.3us p95=  1296.0us p99=  1859.9us err=0
+mixed relaxed  procs=  4 postgres      2412 ops/s  p50=  1273.3us p95=  4317.2us p99=  6480.9us err=0
+mixed relaxed  procs=  4 redis         4944 ops/s  p50=   650.6us p95=  1927.6us p99=  2873.0us err=0
+mixed relaxed  procs=  8 postgres      2192 ops/s  p50=  2833.0us p95=  9562.5us p99= 14355.0us err=0
+mixed relaxed  procs=  8 redis         5492 ops/s  p50=  1208.5us p95=  3608.5us p99=  5533.0us err=0
+mixed relaxed  procs= 16 postgres      2056 ops/s  p50=  5587.1us p95= 22588.6us p99= 36102.1us err=0
+mixed relaxed  procs= 16 redis         4995 ops/s  p50=  2478.5us p95=  8788.5us p99= 14794.1us err=0
+saved bench/results/mixed_1M.json

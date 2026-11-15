@@ -1,0 +1,49 @@
+{
+ "timestamp": "2026-11-09 02:00:20",
+ "python": "3.13.18",
+ "platform": "Linux-6.18.44-fc-v310-x86_64-with-glibc2.39",
+ "cpus": 2,
+ "postgres": "16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)",
+ "redis": "7.0.15",
+ "pg_size": "34 MB",
+ "pg_shared_buffers": "1GB",
+ "rows": {
+  "dishes": 200,
+  "items_today": 3608,
+  "payments": 10800,
+  "orders": 10800,
+  "order_items": 48633,
+  "customers": 50002
+ }
+}
+S1_menu          postgres durable  rep0  p50=   1634.3us  p95=   2463.4us  p99=   2836.4us  server=500.5us
+S1_menu          postgres durable  rep1  p50=   1605.1us  p95=   2453.9us  p99=   2705.3us  server=501.4us
+S1_menu          postgres durable  rep2  p50=   1778.0us  p95=   2580.6us  p99=   3150.7us  server=519.9us
+S1_menu          redis    durable  rep0  p50=    441.2us  p95=    794.5us  p99=   1046.3us  server=5.0us
+S1_menu          redis    durable  rep1  p50=    395.0us  p95=    745.2us  p99=    928.0us  server=3.8us
+S1_menu          redis    durable  rep2  p50=    485.7us  p95=    760.9us  p99=    906.9us  server=4.6us
+S2_order_check   postgres durable  rep0  p50=    355.1us  p95=    563.2us  p99=    724.1us  server=76.6us
+S2_order_check   postgres durable  rep1  p50=    333.8us  p95=    553.3us  p99=    744.9us  server=72.1us
+S2_order_check   postgres durable  rep2  p50=    329.0us  p95=    552.6us  p99=    734.0us  server=74.5us
+S2_order_check   redis    durable  rep0  p50=    157.3us  p95=    245.3us  p99=    416.3us  server=8.5us
+S2_order_check   redis    durable  rep1  p50=    151.1us  p95=    240.6us  p99=    397.7us  server=8.5us
+S2_order_check   redis    durable  rep2  p50=    146.2us  p95=    257.3us  p99=    411.8us  server=7.1us
+S4_kds_queue     postgres durable  rep0  p50=    440.5us  p95=    755.3us  p99=    942.3us  server=135.7us
+S4_kds_queue     postgres durable  rep1  p50=    399.7us  p95=    708.0us  p99=   1013.5us  server=132.6us
+S4_kds_queue     postgres durable  rep2  p50=    394.9us  p95=    677.9us  p99=    947.8us  server=123.2us
+S4_kds_queue     redis    durable  rep0  p50=    455.6us  p95=    702.0us  p99=    929.5us  server=131.9us
+S4_kds_queue     redis    durable  rep1  p50=    421.1us  p95=    668.3us  p99=    901.9us  server=136.6us
+S4_kds_queue     redis    durable  rep2  p50=    428.4us  p95=    670.2us  p99=    856.0us  server=131.2us
+S6_hall_map      postgres durable  rep0  p50=   1086.6us  p95=   1582.3us  p99=   1903.1us  server=426.4us
+S6_hall_map      postgres durable  rep1  p50=   1188.6us  p95=   1767.9us  p99=   2127.7us  server=478.2us
+S6_hall_map      postgres durable  rep2  p50=   1126.9us  p95=   1679.9us  p99=   1948.7us  server=449.5us
+S6_hall_map      redis    durable  rep0  p50=   1176.1us  p95=   1796.1us  p99=   2221.2us  server=371.0us
+S6_hall_map      redis    durable  rep1  p50=   1181.6us  p95=   1829.8us  p99=   2019.3us  server=366.5us
+S6_hall_map      redis    durable  rep2  p50=   1075.0us  p95=   1726.5us  p99=   2097.3us  server=343.1us
+S7_top_dishes    postgres durable  rep0  p50=   1427.7us  p95=   2452.9us  p99=   2737.8us  server=1311.1us
+S7_top_dishes    postgres durable  rep1  p50=   1441.5us  p95=   2425.0us  p99=   2613.2us  server=1317.3us
+S7_top_dishes    postgres durable  rep2  p50=   1425.8us  p95=   2371.8us  p99=   2658.9us  server=1291.2us
+S7_top_dishes    redis    durable  rep0  p50=    129.0us  p95=    243.3us  p99=    366.3us  server=46.2us
+S7_top_dishes    redis    durable  rep1  p50=    120.9us  p95=    205.8us  p99=    301.1us  server=42.7us
+S7_top_dishes    redis    durable  rep2  p50=    125.5us  p95=    217.7us  p99=    299.9us  server=45.2us
+saved bench/results/latency_10000.json

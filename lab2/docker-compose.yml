@@ -1,0 +1,33 @@
+# Усі СКБД лабораторної однією командою:  docker compose up -d
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: restaurant
+      TZ: Europe/Kyiv
+      PGTZ: Europe/Kyiv
+    command: >
+      postgres -c shared_preload_libraries=pg_stat_statements
+               -c pg_stat_statements.track=top -c pg_stat_statements.track_utility=off
+               -c shared_buffers=1GB -c work_mem=32MB -c maintenance_work_mem=512MB
+               -c timezone=Europe/Kyiv
+    ports: ["5432:5432"]
+    shm_size: 1gb
+    volumes: [pgdata:/var/lib/postgresql/data, ./sql:/sql:ro]   # SQL-скрипти всередині контейнера
+
+  redis:
+    image: redis:7
+    command: redis-server --appendonly yes --appendfsync everysec --save ""
+    ports: ["6379:6379"]
+    volumes: [redisdata:/data]
+
+  mongo:
+    image: mongo:7
+    ports: ["27017:27017"]
+    volumes: [mongodata:/data/db, ./mongo:/scripts:ro]
+
+volumes:
+  pgdata:
+  redisdata:
+  mongodata:
